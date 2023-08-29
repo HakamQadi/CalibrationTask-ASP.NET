@@ -16,16 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Duser\Desktop\CalibrationTask-ASP.NET\CalibrationTask\CalibrationTask
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+[C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/AddEquipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRXF1aXBtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/CalibrationDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsaWJyYXRpb25EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/DeleteEquipment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlRXF1aXBtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Duser/Desktop/CalibrationTask-ASP.NET/CalibrationTask/CalibrationTask/Pages/Shared/_ValidationScriptsPartial.cshtml]

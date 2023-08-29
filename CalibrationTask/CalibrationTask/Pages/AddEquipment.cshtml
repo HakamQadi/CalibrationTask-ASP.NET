@@ -1,0 +1,68 @@
+﻿@page
+@model AddEquipmentModel
+@{
+    ViewData["Title"] = "Add Equipment";
+}
+
+<h2>Add Equipment</h2>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Org_ID">Organization ID</label>
+                <input type="text" class="form-control" id="Org_ID" name="Equipment.Org_ID" asp-for="Equipment.Org_ID" required>
+            </div>
+            <div class="form-group">
+                <label for="Comp_ID">Company ID</label>
+                <input type="text" class="form-control" id="Comp_ID" name="Equipment.Comp_ID" asp-for="Equipment.Comp_ID" required>
+            </div>
+            <div class="form-group">
+                <label for="Equipment_No">Equipment Number</label>
+                <input type="text" class="form-control" id="Equipment_No" name="Equipment.Equipment_No" asp-for="Equipment.Equipment_No" required>
+            </div>
+            <div class="form-group">
+                <label for="Equipment_Desc">Equipment Description</label>
+                <input type="text" class="form-control" id="Equipment_Desc" name="Equipment.Equipment_Desc" asp-for="Equipment.Equipment_Desc" required>
+            </div>
+            <div class="form-group">
+                <label for="Serial_No">Serial Number</label>
+                <input type="text" class="form-control" id="Serial_No" name="Equipment.Serial_No" asp-for="Equipment.Serial_No" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Model">Model</label>
+                <input type="text" class="form-control" id="Model" name="Equipment.Model" asp-for="Equipment.Model" required>
+            </div>
+            <div class="form-group">
+                <label for="Location">Location</label>
+                <input type="text" class="form-control" id="Location" name="Equipment.Location" asp-for="Equipment.Location" required>
+            </div>
+            <div class="form-group">
+                <label for="Frequency">Frequency</label>
+                <select class="form-control" id="Frequency" name="Equipment.Frequency" asp-for="Equipment.Frequency" required>
+                    <option value="select">Select</option>
+                    <option value="1">1 month</option>
+                    <option value="3">3 months</option>
+                    <option value="6">6 months</option>
+                    <option value="9">9 months</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Equipment_Start_Date">Equipment Start Date</label>
+                <input type="date" class="form-control" id="Equipment_Start_Date" name="Equipment.Equipment_Start_Date" asp-for="Equipment.Equipment_Start_Date">
+            </div>
+            <div class="form-group">
+                <label for="Remarks">Remarks</label>
+                <textarea class="form-control" id="Remarks" name="Equipment.Remarks" asp-for="Equipment.Remarks"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="Disabled_Date">Disabled Date</label>
+                <input type="date" class="form-control" id="Disabled_Date" name="Equipment.Disabled_Date" asp-for="Equipment.Disabled_Date">
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Equipment</button>
+</form>
