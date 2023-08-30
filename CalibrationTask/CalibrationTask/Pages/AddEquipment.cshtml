@@ -40,16 +40,6 @@
                 <input type="text" class="form-control" id="Location" name="Equipment.Location" asp-for="Equipment.Location" required>
             </div>
             <div class="form-group">
-                <label for="Frequency">Frequency</label>
-                <select class="form-control" id="Frequency" name="Equipment.Frequency" asp-for="Equipment.Frequency" required>
-                    <option value="select">Select</option>
-                    <option value="1">1 month</option>
-                    <option value="3">3 months</option>
-                    <option value="6">6 months</option>
-                    <option value="9">9 months</option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label for="Equipment_Start_Date">Equipment Start Date</label>
                 <input type="date" class="form-control" id="Equipment_Start_Date" name="Equipment.Equipment_Start_Date" asp-for="Equipment.Equipment_Start_Date">
             </div>
@@ -57,10 +47,7 @@
                 <label for="Remarks">Remarks</label>
                 <textarea class="form-control" id="Remarks" name="Equipment.Remarks" asp-for="Equipment.Remarks"></textarea>
             </div>
-            <div class="form-group">
-                <label for="Disabled_Date">Disabled Date</label>
-                <input type="date" class="form-control" id="Disabled_Date" name="Equipment.Disabled_Date" asp-for="Equipment.Disabled_Date">
-            </div>
+           
         </div>
     </div>
 

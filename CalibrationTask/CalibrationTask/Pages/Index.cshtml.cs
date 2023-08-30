@@ -14,8 +14,6 @@ namespace CalibrationTask.Pages
             _configuration = configuration;
         }
 
-        //public List<EquipmentModel> EquipmentList { get; set; }
-
         public void OnGet()
         {
             EquipmentsList = GetAllEquipments();
@@ -42,7 +40,7 @@ namespace CalibrationTask.Pages
                             Serial_No = reader.GetString(7),
                             Model = reader.GetString(3),
                             Location = reader.GetString(6),
-                            Equipment_Start_Date = reader.GetDateTime(2), // Assign the DateTime value directly
+                            Equipment_Start_Date = reader.GetDateTime(2),
                         });
 
                     }

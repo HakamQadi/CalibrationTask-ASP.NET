@@ -22,7 +22,6 @@ namespace CalibrationTask.Pages
 
         public IActionResult OnPost()
         {
-            //This command typically stops further processing of the current request and renders the current Razor Page again, showing the validation error messages to the user.
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -46,12 +45,6 @@ namespace CalibrationTask.Pages
                     addCMD.Parameters.AddWithValue("@Frequency", Equipment.Frequency);
                     addCMD.Parameters.AddWithValue("@Equipment_Start_Date", Equipment.Equipment_Start_Date);
                     addCMD.Parameters.AddWithValue("@Remarks", Equipment.Remarks);
-                    //addCMD.Parameters.AddWithValue("@IsDisabled", Equipment.IsDisabled);
-                    addCMD.Parameters.AddWithValue("@Disabled_Date", Equipment.Disabled_Date);
-                    //addCMD.Parameters.AddWithValue("@CreatedBy", Equipment.CreatedBy);
-                    //addCMD.Parameters.AddWithValue("@LastModifiedBy", Equipment.LastModifiedBy);
-                    //addCMD.Parameters.AddWithValue("@LastModifiedDate", Equipment.LastModifiedDate);
-                    //addCMD.Parameters.AddWithValue("@CreateDate", Equipment.CreateDate);
                     addCMD.ExecuteNonQuery();
 
                 }

@@ -132,88 +132,24 @@ namespace CalibrationTask.Pages
 
 
 
-        //public IActionResult OnPostScheduleCalibration(int id)
-        //{
-        //    DateTime start_date = ((DateTime)Equipment.Equipment_Start_Date).Date;
-        //    var freq = Equipment.Frequency;
-        //    int currentYear = start_date.Year;
-        //    DateTime end_Date = start_date.AddMonths(freq);
-
-        //    List<DateTime> generatedDates = new List<DateTime>();
-
-        //    for (DateTime date = start_date; date <= end_Date; date = date.AddMonths(1))
-        //    {
-        //        if (date.Year == currentYear)
-        //        {
-        //            generatedDates.Add(date);
-        //        }
-        //    }
-        //    return null;
-        //}
 
 
         public IActionResult OnPost(int id)
         {
-            //private EquipmentModel Equipment { get; set; }
-            ////DateTime start_date = ((DateTime)Equipment.Equipment_Start_Date).Date;
-            //DateTime? nullableStartDate = Equipment.Equipment_Start_Date;
-            //DateTime start_date = nullableStartDate.HasValue ? nullableStartDate.Value : default(DateTime);
-            //var freq = Equipment.Frequency;
-            //int currentYear = start_date.Year;
-            ////DateTime end_Date = start_date.AddMonths(freq);
-            //DateTime end_Date = Convert.ToDateTime("2023 - 12 - 30 00:00:00");
 
-
-
-            //List<DateTime> generatedDates = new List<DateTime>();
-
-            //for (DateTime date = start_date; date <= end_Date; date = date.AddMonths(3))
-            //{
-            //    if (date.Year == currentYear)
-            //    {
-            //        generatedDates.Add(date);
-            //    }
-            //}
-            //Console.WriteLine(id + " ID before");
-
-
-
-            //using (var connection = new SqlConnection(_configuration.GetConnectionString("ConnectionString")))
-            //{
-            //    connection.Open();
-
-            //    using (var addCMD = new SqlCommand("UPDATE_EQUIPMENT", connection))
-            //    {
-            //        addCMD.CommandType = System.Data.CommandType.StoredProcedure;
-            //        addCMD.Parameters.AddWithValue("@Frequency", Equipment.Frequency);
-            //        addCMD.ExecuteNonQuery();
-
-            //    }
-            //}
 
 
 
 
             Equipment = GetEquipmentByID(id);
-            //Console.WriteLine(id + " ID after");
-
-            //DateTime? nullableStartDate = Convert.ToDateTime("2023-4-30 00:00:00");
             var nullableStartDate = Equipment.Equipment_Start_Date;
-
             DateTime start_date = nullableStartDate.HasValue ? nullableStartDate.Value : default(DateTime);
-
-            //var freq = Equipment.Frequency;
-
             Console.WriteLine(Equipment.Equipment_Start_Date + "HEEEEELLO");
-            //Console.WriteLine(Equipment.Frequency + " freq befor");
-            var freq = Equipment.Frequency;
+            var freq = 1;
             Console.WriteLine(freq + " freq after");
-
             int currentYear = start_date.Year;
             DateTime end_Date = Convert.ToDateTime("2023-12-30 00:00:00");
-
             List<DateTime> generatedDates = new List<DateTime>();
-
             for (DateTime date = start_date; date <= end_Date; date = date.AddMonths(freq))
             {
                 if (date.Year == currentYear)
@@ -222,7 +158,6 @@ namespace CalibrationTask.Pages
                 }
             }
 
-            // Call the stored procedure to insert generatedDates into the database
             using (var connection = new SqlConnection(_configuration.GetConnectionString("ConnectionString")))
             {
                 connection.Open();
@@ -232,30 +167,29 @@ namespace CalibrationTask.Pages
                     foreach (DateTime date in generatedDates)
                     {
                         command.Parameters.Clear();
-                        command.Parameters.Add("@PlanDate", SqlDbType.DateTime).Value = date;  // Set the correct DateTime parameter
-                                                                                               // Add other parameters here as needed
-                        command.Parameters.AddWithValue("@OrgID", 2); // Empty value
-                        command.Parameters.AddWithValue("@CompID", 2); // Empty value
-                        command.Parameters.AddWithValue("@CALNo", "cal"); // Empty value
-                        command.Parameters.AddWithValue("@EquipmentNo", "num"); // Empty value
-                        command.Parameters.AddWithValue("@EquipmentID", id); // Empty value
-                        command.Parameters.AddWithValue("@SourceID", 2); // Empty value
-                        command.Parameters.AddWithValue("@EmpID", 4); // Empty value
-                        command.Parameters.AddWithValue("@SUPID", 4); // Empty value
-                        command.Parameters.AddWithValue("@CompletedDate", "2023-08-30 10:00:00"); // Empty value
-                        command.Parameters.AddWithValue("@CalibrationPeriod", "Annual"); // Empty value
-                        command.Parameters.AddWithValue("@MeasurementRange", "0-100"); // Empty value
-                        command.Parameters.AddWithValue("@Tolerance", "0.5"); // Empty value
-                        command.Parameters.AddWithValue("@CalibrationMethod", "A"); // Empty value
+                        command.Parameters.Add("@PlanDate", SqlDbType.DateTime).Value = date;
+                        command.Parameters.AddWithValue("@OrgID", 2);
+                        command.Parameters.AddWithValue("@CompID", 2);
+                        command.Parameters.AddWithValue("@CALNo", "cal");
+                        command.Parameters.AddWithValue("@EquipmentNo", "num");
+                        command.Parameters.AddWithValue("@EquipmentID", id);
+                        command.Parameters.AddWithValue("@SourceID", 2);
+                        command.Parameters.AddWithValue("@EmpID", 4);
+                        command.Parameters.AddWithValue("@SUPID", 4);
+                        command.Parameters.AddWithValue("@CompletedDate", " ");
+                        command.Parameters.AddWithValue("@CalibrationPeriod", "Annual");
+                        command.Parameters.AddWithValue("@MeasurementRange", "0-100");
+                        command.Parameters.AddWithValue("@Tolerance", "0.5");
+                        command.Parameters.AddWithValue("@CalibrationMethod", "A");
                         command.Parameters.AddWithValue("@CalibrationStandard", "XYZ"); // Empty value
-                        command.Parameters.AddWithValue("@CalibrationResult", "pass"); // Empty value
-                        command.Parameters.AddWithValue("@Notes", "no"); // Empty value
-                        command.Parameters.AddWithValue("@Remarks", "done"); // Empty value
-                        command.Parameters.AddWithValue("@ApprovedBy", 7); // Empty value
-                        command.Parameters.AddWithValue("@LastModifiedDate", "2023-08-30 10:00:00"); // Empty value
-                        command.Parameters.AddWithValue("@LastModifiedBy", 2155); // Empty value
-                        command.Parameters.AddWithValue("@Cal_Status", 0); // Empty value
-                        command.Parameters.AddWithValue("@CreatedBy", " "); // Empty value
+                        command.Parameters.AddWithValue("@CalibrationResult", "pass");
+                        command.Parameters.AddWithValue("@Notes", "no");
+                        command.Parameters.AddWithValue("@Remarks", "done");
+                        command.Parameters.AddWithValue("@ApprovedBy", 7);
+                        command.Parameters.AddWithValue("@LastModifiedDate", "2023-08-30 10:00:00");
+                        command.Parameters.AddWithValue("@LastModifiedBy", 2155);
+                        command.Parameters.AddWithValue("@Cal_Status", 0);
+                        command.Parameters.AddWithValue("@CreatedBy", " ");
 
                         command.ExecuteNonQuery();
                     }

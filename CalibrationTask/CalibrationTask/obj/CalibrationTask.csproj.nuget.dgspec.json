@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj": {}
+    "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj": {
+    "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
+        "projectUniqueName": "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
         "projectName": "CalibrationTask",
-        "projectPath": "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
+        "projectPath": "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
         "packagesPath": "C:\\Users\\Duser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\obj\\",
+        "outputPath": "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Duser\\AppData\\Roaming\\NuGet\\NuGet.Config",

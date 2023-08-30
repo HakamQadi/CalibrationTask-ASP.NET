@@ -14,7 +14,7 @@
             <h4 class="card-title">@Html.DisplayFor(model => model.Equipment.Equipment_No)</h4>
             <hr />
 
-            <form method="post">
+            <form method="post" asp-page-handler="OnPost">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group py-2">
@@ -41,14 +41,11 @@
                         </div>
                         <div class="form-group d-flex justify-content-between py-2">
                             <label>Schedule Calibration:</label>
-                            @* <button type="submit" asp-page-handler="OnPostScheduleCalibration" asp-route-id="@Model.Equipment.ID" class="btn btn-primary w-50">Schedule Calibration</button> *@
-                            @* <input asp-page-handler="OnPostScheduleCalibration" type="submit" value="ScheduleCalibration" class="form-control bg-primary text-white w-50"> *@
                         </div>
                         <input type="hidden" asp-for="Equipment.ID" />
                         <button type="submit" asp-page-handler="OnPost" asp-route-id="@Model.Equipment.ID" class="btn btn-success">Update</button>
 
-                        @* <input  style="width:5rem" type="submit" value="Update" id="saveButton" class="form-control bg-success text-white"> *@
-                        @* asp-page-handler="OnPost" *@
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="form-group py-2">
@@ -86,12 +83,11 @@
 
 
 
-    <form method="post">
+    <form method="post" >
 
     <div class="mt-4">
         <h3>Calibration Register</h3>
             <button type="submit" asp-page-handler="OnPostScheduleCalibration" asp-route-id="@Model.Equipment.ID" class="btn btn-primary w-50">Schedule Calibration</button>
-            @* <button type="submit" asp-page-handler="OnPostScheduleCalibration" asp-route-id="@Model.Equipment.ID" class="btn btn-primary w-50">Schedule Calibration</button> *@
         <div class="table-responsive">
             <table class="table">
                 <thead>
@@ -110,9 +106,7 @@
                         <tr>
                             <td>@calibrationEntry.CAL_NO</td>
                             <td>@calibrationEntry.PlanDate</td>
-                            @* <td>@(calibrationEntry.CompletedDate.ToString("yyyy-MM-dd"))</td> *@
                             <td>@(calibrationEntry.CompletedDate < DateTime.Now ? " " : calibrationEntry.CompletedDate)</td>
-                            @* <td>@calibrationEntry.FormattedCompletedDate</td> *@
                             <td>@(calibrationEntry.Source == 0 ? "" : calibrationEntry.Source)</td>
                             <td>@calibrationEntry.CompletedBy</td>
                             <td>
@@ -130,14 +124,7 @@
                                 }
                             </td>
                         </tr>
-                        @* @foreach (var generatedDate in generatedDates) *@
-                        {
-                            <tr>
-                                @*<td colspan="2"></td>*@
-                                @* <td>@generatedDate.ToString("yyyy-MM-dd")</td> *@
-                                @*<td colspan="3"></td>*@
-                            </tr>
-                        }
+                        
                     }
                 </tbody>
 
@@ -149,7 +136,7 @@
 
 
     
-<script>
+ <script>
     document.addEventListener("DOMContentLoaded", function () {
         const disabledCheckbox = document.getElementById("disabledCheckbox");
         const disabledDateInput = document.getElementById("disabledDate");
@@ -164,95 +151,8 @@
             }
         });
     });
-</script>
+</script> 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- @* <script>
-    // Store the initial values of the input fields
-    var initialValues = {
-        equipmentDesc: "@Model.Equipment.Equipment_Desc",
-        equipmentStartDate: "@Model.Equipment.Equipment_Start_Date",
-        model: "@Model.Equipment.Model",
-        frequency: "@Model.Equipment.Frequency",
-        scheduleCalibration: "",
-        remarks: "",
-        location: "@Model.Equipment.Location",
-        serialNo: "@Model.Equipment.Serial_No",
-        disabled: false,
-        disabledDate: ""
-    };
-
-    // Function to check if any value has changed
-    function checkForChanges() {
-        var currentValues = {
-            equipmentDesc: $("#equipmentDesc").val(),
-            equipmentStartDate: $("#equipmentStartDate").val(),
-            model: $("#model").val(),
-            frequency: $("#frequency").val(),
-            remarks: $("#remarks").val(),
-            location: $("#location").val(),
-            serialNo: $("#serialNo").val(),
-            disabled: $("#disabledCheckbox").is(":checked"),
-            disabledDate: $("#disabledDate").val()
-        };
-
-
-        // Compare current values with initial values
-        var isAnyFieldChanged = Object.keys(initialValues).some(function (key) {
-            return currentValues[key] !== initialValues[key];
-        });
-
-        $("#saveButton").prop("disabled", !isAnyFieldChanged);
-    }
-
-    // Attach event listeners to input fields
-    $("#equipmentDesc, #equipmentStartDate, #model, #frequency, #remarks, #location, #serialNo, #disabledCheckbox, #disabledDate").on("input change", checkForChanges);
-// // </script>  
-*@
 
 
 

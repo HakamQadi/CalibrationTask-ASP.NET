@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OKx/5HBpZAKF6QA/+bmGgXk2KOfxo98iLd0+dTdLA3VOob4BljDjc59HzRAklBoCbJ6xzLD4Qtyc/jSbZpVXaQ==",
+  "dgSpecHash": "R2grrozJoR/V4FMFW9w43F6ApiHg4x3cuIKVTgFjXCDl8P1HWJm2KKKKZqi2Ws+jZ2LrDEMk0Bfe3VdwZ8VaJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Duser\\Desktop\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
+  "projectFilePath": "C:\\Users\\Duser\\Desktop\\New folder (2)\\CalibrationTask-ASP.NET\\CalibrationTask\\CalibrationTask\\CalibrationTask.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Duser\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Duser\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
